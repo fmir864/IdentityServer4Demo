@@ -29,6 +29,7 @@ namespace IdentityServer
                 //    shared: true,
                 //    flushToDiskInterval: TimeSpan.FromSeconds(1))
                 .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}", theme: AnsiConsoleTheme.Literate)
+                .WriteTo.File(@"identityserver4_log.txt")
                 .CreateLogger();
 
             try
